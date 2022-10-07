@@ -1,18 +1,22 @@
-import React from "react";
+import Button from "react-bootstrap/Button";
 
-interface ButtonProps {
-  label: string;
-  disabled: boolean;
-  onClick(): void;
+import { ButtonProps as BootstrapButtonProps } from "react-bootstrap/Button";
+
+interface ButtonProps extends BootstrapButtonProps {
+  variant: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark' | 'light' | 'link' | 'outline-primary' | 'outline-secondary' | 'outline-success' | 'outline-danger' | 'outline-warning' | 'outline-info' | 'outline-dark' | 'outline-light',
+  /**
+  * The content of Button
+  * @uxpinpropname  Label
+  * */
+  children: string,
+  /**
+  * Example of extending the prop to include comments and UXPin props-panel tags
+  * */
+  // active: BootstrapButtonProps["active"]
 }
 
-export default function Button(props: ButtonProps) {
+export default function ButtonBootstrap(props: ButtonProps) {
   return (
-    <button
-      onClick={props.onClick}
-      disabled={props.disabled}
-    >
-      {props.label}
-    </button>
+    <Button {...props}/>
   );
 }
