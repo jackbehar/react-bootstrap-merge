@@ -13,6 +13,7 @@ module.exports = {
           'src/components/CloseButton/CloseButton.tsx',
           'src/components/Tabs/Tabs.tsx',
           'src/components/Tab/Tab.tsx',
+          'src/components/ButtonGroup/ButtonGroup.tsx',
         ],
       },
     ],
